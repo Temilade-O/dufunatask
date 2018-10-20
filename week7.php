@@ -29,23 +29,19 @@ If the temperature is greater than 20 degree Celsius but less than 30 degree Cel
 If the temperature is greater than or equal 30 degree Celsius but less than 40 degree Celsius, Display “It’s so hot today.”
 If the temperature is greater than or equal 40 degree Celsius, Display “Am I in the Sahara Desert?!”*/
 echo "<br> Quiz3<br>";
-    $temp= "30";
-    switch($temp){
-    case '$temp< 20':
-        echo "It is really cold today.<br>";
-        break;
-        case'$temp >20 & < 30':
-        echo "The weather is just perfect.<br>";
-        break;
-        case '$temp >= 30 & < 40':
+    $t = 20;
+    if ($t <=20 ){
+    echo "It is really cold today.<br>";
+    } else if ($t>20 && $t<30){
+    echo "The weather is just perfect.<br>";
+    } else if ($t>=30 && $t<40){
         echo "It’s so hot today.<br>";
-        break;
-        case '$temp>= 40':
-        echo "Am I in the Sahara Desert?!.<br>";
-        break;    
-    default:
-        echo "<br><br><br>Its a good day.<br><br>";
-    }
+    } else if ($t>=40){
+    echo "Am I in the Sahara Desert?!.<br>";
+    }else {
+        echo "I dont know what temperature it is. <br>";
+    };
+      
     
 
 /*quiz-4 Write a PHP program that displays every number between 100 and 150 each on a
@@ -65,12 +61,13 @@ a new line using a loop (for loop or while loop)*/
 
 /*quiz 5 -Create two arrays. The first should store the first name of three people, the second should store respective hobbles. */
 echo "<br> Quiz5<br>";
-$name = array("Temilade"=>"travelling", "Temitope"=>"cooking", "Omotolani"=>"jumpimg" );
-
-foreach ($name as $y=>$y_value ) {
-    
-    echo "My name is "."$y."." I love "."$y_value<br>";
+$name = array("Temilade", "Temitope", "Omotolani");
+$hobby =array(" travelling", " cooking", "jumpimg");
+for($i=0; $i<count($name);$i++)
+ {
+    echo "My name is $name[$i]. I love $hobby[$i]<br>";
 }
+
 
 /*quiz 6- */
 

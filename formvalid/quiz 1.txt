@@ -1,0 +1,15 @@
+1. Write 5 practical examples of data type validation
+    checking that date of birth is a date type
+    Ensuring that age is an integer
+    Ensuring that occupation is charcter type
+    Radio must be selectable at least once
+    Ensuring that should be selected at least once
+
+
+2. Write 5 practical examples of range and constraint validation
+    A US phone number should have 10 digits and no special character
+    Fistname should be between 3- 20 characters
+    Number of hours worked must be less than 50 and more than 0
+    Your password needs to be between 8 and 30 characters long, and contain one uppercase letter, one symbol, and a number
+    Ensuring that email can accept @ and .
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My Login Form</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href=""/>
+        
+        <title>Validated Registration Form</title>
+        <script type="text/javascript">
+            function validateForm() {
+            
+            var firstname = document.regForm.firstname;
+            if (firstname.value == "") {
+            alert("Please input your first name");
+            name.focus();
+            return false;
+            }
+            var lastname = document.regForm.lastname;
+            if (lastname.value == "") {
+            alert("Please input your last name");
+            name.focus();
+            return false;
+            }
+            var email = document.forms["regForm"]["email"];
+            if (email.value == "") {
+            alert("Please input your email address");
+            email.focus();
+            return false;
+            }
+            var passwd = document.forms["regForm"]["passwd"];
+            if (passwd.value == "") {
+            alert("Please input your password");
+            email.focus();
+            return false;
+            }
+            var confirm_password = document.forms["regForm"]["confirm_password"];
+            if (confirm_password.value == "") {
+            alert("type your password again");
+            email.focus();
+            return false;
+            }
+            if (confirm_password.value == passwd.value ) {
+            alert( "correct password.");
+           confirm_password.focus();
+            return true;
+            }else{
+                alert("incorrect password");
+            }
+            var phonenumber = document.myForm.phonenumber
+            if (phonenumber.value == "" || isNaN(phonenumber.value)) {
+            alert("Phone number should be numeric.");
+            phonenumber.focus();
+            return false;
+            }
+            if (phonenumber.value.length != 11) {
+            alert( "Phone number should be exactly 11 digits.");
+            phonenumber.focus();
+            return false;
+            }
+            var country = document.regForm.country;
+            if (country.value == "-1") {
+            alert("Please select your tribe");
+            return false;
+            }
+            return true;
+            }
+            </script>
+           
+    </head>
+    <body>
+        <h3>Registration Form with Validation</h3>
+        <form method="POST" name="regForm" onsubmit="return validateForm()">
+           <fieldset>
+            <legend>Login Form:</legend> 
+                 <label for="firstname">Firstname:</label>
+                 <input type="text" name="firstname" id="firstname" />
+                 <br/>
+                 <label for="lastname">Lastname:</label>
+                <input type="text" name="lastname" id="lastname" />
+                 <br/>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email"/>
+                <br/>
+                <label for="password">Password:</label>
+                <input type="password" name="passwd" id="passwd" />
+                <br/>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" />
+                <br/> 
+                <label for="phonenumber">Phone Number:</label>
+                <input type="tel" name="phonenumber" id="phonenumber" />
+               
+                <br/>
+                <fieldset>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="gender" value="female"/>Female
+                <input type="radio" name="gender" id="male" value="male"/>Male
+                </fieldset>
+                <br/>
+                <label for="country">Country:</label>
+                <select name="country" id="country" style="width:100%">
+                    <option value="nigeria">Nigeria</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="senegal">Senegal</option> 
+                    <option value="egypt">Egypt</option>     
+                    <option value="cameroun">Cameroun</option>
+                    <option value="uganda">Uganda</option>         
+                </select>
+            
+                <br/>
+                <input type="submit" name="submit" value="submit" id="submit" style="background-color:purple; color: white"/>
+        </fieldset>         
+        </form>
+    </body>  

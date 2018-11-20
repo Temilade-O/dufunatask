@@ -1,0 +1,73 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cookies Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src=""></script>
+    <style>
+        form{
+        border: 3px solid #f1f1f1;
+        padding: 20px;
+        width: 60%;
+        
+        }
+         input[type=email], input[type=password], input[type=text] {
+                    
+                    padding: 8px 8px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    box-align: center;
+              
+                }
+         
+        button.login{
+            background-color: purple;
+            float: center;
+        }
+        button.signup{
+            background-color: palevioletred;
+            float: left;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <form action="cq.php" method="POST" enctype="multipart/form-data">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname" required placeholder="Enter firstname"/>
+        <br/>
+    
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname" required placeholder="Enter lastname"/>
+        <br/>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required placeholder="Enter email"/>
+        <br />
+        <label for="password">Password: </label>
+        <input type="password" name="passwordd" id="password" required placeholder="Enter password"/>
+        <br />
+        <button type="submit" name="signup" >SignUp</button>
+        
+    </form>
+   
+    <form action="cq2.php" method="POST" enctype="multipart/form-data">
+    <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required placeholder="Enter email"/>
+        <br />
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required placeholder="Enter password"/>
+        <br />
+    
+        <button type="submit" name="login" class="login">Log in</button>
+
+    </form>
+
+</body>
+</html>
+

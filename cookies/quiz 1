@@ -1,0 +1,17 @@
+Write the differences between Cookies and Sessions
+
+COOKIE
+A cookie is a text-only string that takes a place in the memory of user’s browser. 
+If the lifetime of the cookie is set to be longer than the time user spends at that site, 
+then this string is saved to file for future reference. 
+User could disabled the cookie in their browser setting.
+cookies are stored in client side.
+Cookies can only store strings.
+
+
+SESSION
+Session values are store in server side not in user’s machine. 
+A session is available as long as the browser is opened. User couldn’t be disabled the session. 
+We could store not only strings but also objects in session.
+Sessions are stored in server side.
+When users close their browser, they also lost the session.

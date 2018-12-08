@@ -68,39 +68,4 @@ $(document).ready(function(){
   
   })
 
-  new needShareDropdown(document.getElementById('demo'), {
-
-    // child selector of custom share button
-    shareButtonClass: false, 
-  
-    // default or box
-    iconStyle: 'default', 
-  
-    // horizontal or vertical
-    boxForm: 'horizontal', 
-  
-    // top / middle / bottom + Left / Center / Right
-    position: 'bottomCenter', 
-  
-    // text for trigger button
-    buttonText: 'Share',
-  
-    // http or https
-    protocol: ['http', 'https'].indexOf(window.location.href.split(':')[0]) === -1 ? 'https://' : '//',
-  
-    // url to share
-    url: window.location.href,
-  
-    // title to share
-    title: root.getTitle(),
-  
-    // image to share
-    image: root.getImage(),
-  
-    // description to share
-    description: root.getDescription(),
-  
-    // social networks
-    networks: 'Mailto,Twitter,Pinterest,Facebook,GooglePlus,Reddit,Delicious,Tapiture,StumbleUpon,Linkedin,Slashdot,Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,Pingfm,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru'
-    
-  });
+ 

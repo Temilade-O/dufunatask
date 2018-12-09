@@ -1,57 +1,32 @@
-function validate() {  
-	var result = "";	
-    result += validateFirstname(); 	
-    result += validateLastname(); 
-	result += validateEmail();
-	result += validatePassword();
-	result += validateTerms();
-	
-	if (result == "") return true;
-	
-	alert("Validation Result:\n\n" + result);
-	return false;	
-}
+function validateForm() {
+    var x = document.forms["register-form"]["firstname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
 
-function validateFirstname() {
-	var name = document.getElementsByName("firstname")[0].value;
-	if (name.length <= 3)
-		return "Firstame should be at least three characters.\n";	
-	return "";
-}
+    var x = document.forms["register-form"]["lasttname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    var x=document.forms["register-form"]["email"].value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");  
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+    return false;  
+    }  
+    
+    var x= document.forms["register-form"]["pwd"].value;  
+    var xy=document.forms["register-form"]["repassword"].value;  
+    if(x==xy){  
+    return true;  
+    }  
+    else{  
+    alert("password must be same!");  
+    return false;  
+    }  
+        
 
-function validateLastname() {
-	var name = document.getElementsByName("lastname")[0].value;
-	if (name.length <= 3)
-		return "Lastname should be at least three characters.\n";	
-	return "";
-}
-
-function validatePassword() {
-	var password = valueOf("password");
-	var retype = valueOf("retype_password");
-	
-	if (password.length <= 6) 
-		return "Password should be at least 6 characters.\n";
-	
-	if (password != retype) 
-		return "Passwords do not match.\n";	
-	return "";
-}
-
-function validateEmail() {
-	var email = valueOf("email");
-	var retype = valueOf("retype_email");
-	
-	if (email.indexOf('@') == -1) 
-		return "Email should be a valid address.\n";
-	
-	if (email != retype)
-		return "Email addresses do not match.\n";
-	return "";	
-}
-
-
-
-function valueOf(firstname) {
-	return document.getElementsByName(firstname)[0].value;
-}
+  }

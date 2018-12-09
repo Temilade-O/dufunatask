@@ -1,8 +1,6 @@
 <?php
-$message = '';
+echo "";
 if (isset($_POST['btn-register'])) {
-    //All validation scripts go here
-    
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
@@ -10,36 +8,36 @@ if (isset($_POST['btn-register'])) {
     $repassword= $_POST['repassword'];
 
 
-    }
-
-    header('location:note.html');
-
     saveToDatabase($firstname, $lastname, $email, $pwd, $repassword );
-
-        
-
+}   
         function saveToDatabase($firstname, $lastname, $email, $pwd, $repassword ){
             $serverName = "localhost";
-            $database = "memoir";
+            $database = "journal";
             $username = "root";
             $password = 'mysql';
             //Open database connection
             $conn = mysqli_connect($serverName, $username, $password, $database);
+            echo "1";
             // Check that connection exists
             if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
             }
-            $sql = "INSERT INTO user (firstname, lastname, email, pwd, repassword, created_date)
-                VALUES ('$firstname','$lastname', '$email', ' $pwd', '$repassword', NOW())";
+            $sql = "INSERT INTO users (firstname, lastname, email, pwd, repassword, created_at)
+                VALUES ('$firstname','$lastname', '$email', '$pwd', '$repassword', NOW())";
             $result = mysqli_query($conn, $sql);
+            echo "1";
             //Check out for errors
             if($result){
-                $smsg = "User Created Successfully.";
+                echo "User Created Successfully.";
+                header('location:note.html');
             }else{
-                $fmsg ="User Registration Failed";
+                die("Error: " . $sql . "<br>" . mysqli_error($conn));
+                echo "User Registration Failed";
+                
             }
-            
+            mysqli_close($conn);
+        
         }
 
-
 ?>
+ 

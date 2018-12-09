@@ -10,19 +10,12 @@
     <script type="text/javascript" src="login.js"></script>
 
       
-    <style>
-            .error {
-            color: red;
-            }
-            .success {
-            color: green;
-            }
-            </style>
+  
 </head>
 <body>
         <header>
-                MEMOIR..... 
-                <p id="mini">Enjoying every moments</p>
+                Memoir App
+                <p id="mini">Documenting every moment</p>
         </header>
 
     <div class="container">
@@ -31,20 +24,20 @@
                         
             <div class="container1">
                <input type='checkbox' id='form-switch'>
-                <form action ="login.php" id='login-form' method='post' onsubmit="return validate()" >
+                <form action ="login.php" id='login-form' method='post'  >
                    
-                    <input type="text" id= "email"placeholder="Email" >
-                    <input type="password" id= "pwd"placeholder="Password" >
-                    <button type='submit' id="btn-login">Login</button>
+                    <input type="text" id= "email" placeholder="Email" name="email">
+                    <input type="password" id= "pwd" placeholder="Password" name="pwd">
+                    <button type='submit' id="btn-login" name="btn-login">Login</button>
                     <label for='form-switch'><span>Register</span></label>
                     </form>
-                    <form id='register-form' action="connect.php" method='post' onsubmit="return validate()">
-                    <input type="text" id="firstname" placeholder="Firstname" >
-                    <input type="text" id="lastname" placeholder="Lastname" >    
-                    <input type="email" id= "email"placeholder="Email" >
-                    <input type="password" id="pwd" placeholder="Password" >
-                    <input type="password" id="repassword" placeholder="Re Password" >
-                    <button type='submit'id="btn-register">Register</button>
+                    <form id='register-form' action="connect.php" method='post' onsubmit="return validateForm()">
+                    <input type="text" id="firstname" placeholder="Firstname" name="firstname" >
+                    <input type="text" id="lastname" placeholder="Lastname" name="lastname">    
+                    <input type="email" id= "email"placeholder="Email" name="email">
+                    <input type="password" id="pwd" placeholder="Password" name="pwd">
+                    <input type="password" id="repassword" placeholder="Re Password" name="repassword" >
+                    <button type='submit'id="btn-register" name="btn-register">Register</button>
                     <label for='form-switch'>Have an account already? Sign In Now..</label>
                     </form>
                 </div>
